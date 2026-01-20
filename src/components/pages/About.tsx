@@ -1,7 +1,22 @@
+import Markdown from "react-markdown";
+
+
+const DATA = {
+    summary:
+        "Specializes in React, Next.js, and TypeScript for creating clean and responsive user interfaces, and uses Django to develop secure and scalable backend systems. __Graduated from the University of Lampung (Universitas Lampung) as the second top graduate in Informatics Engineering__, achieving a GPA of __3.83__ and completing the program within __4 years__. __Has 2 years of professional experience working at a software house__, primarily developing landing pages and CMS.",
+};
+
 
 const About = () => {
     return (
-        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, vel illum? Iste alias quaerat laudantium ut fugit quo eos omnis quis unde cum aliquam quisquam, facere architecto dolores itaque odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi voluptate cupiditate alias, aliquam et dicta nisi deleniti accusamus officiis labore natus facilis maxime sed. Ducimus totam unde vel fugit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque iusto omnis distinctio ullam? Atque quas itaque ut minima quos ex illum assumenda, expedita ratione dolore in eligendi nesciunt! Voluptas, saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, totam at, esse suscipit facere fugit tempore qui, omnis id architecto non ipsam distinctio. Esse quas reiciendis accusamus eum architecto animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ratione distinctio temporibus sed, corrupti rem natus et sunt. Assumenda quaerat commodi a blanditiis unde cumque voluptatum perferendis quos saepe voluptates. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam vero omnis voluptas, fugiat facilis molestias doloremque quasi, dolorum sapiente fugit delectus nulla ut suscipit nam soluta quaerat ad. Excepturi, aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore quia fugiat facere dolores rerum enim nemo, aperiam soluta debitis officiis nam natus obcaecati in. Sint deleniti repellendus tempore itaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nihil optio eos dolorum molestias, non enim? Quos, nostrum eum placeat asperiores, sint adipisci minus non quibusdam provident alias numquam possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore commodi illum, eius cumque velit accusantium, dolor quaerat quam mollitia dolores voluptatibus voluptates. Amet eos modi, excepturi sit rem ad nisi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nisi cumque ad sequi molestiae temporibus molestias iusto et cupiditate rerum. Ex dicta unde odio ea sapiente nesciunt architecto voluptas repellat.</div>
+        <div className="flex min-h-0 flex-col gap-y-4">
+            <h2 className="text-xl font-bold">About</h2>
+            <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+                <Markdown>
+                    {DATA.summary}
+                </Markdown>
+            </div>
+        </div>
     )
 }
 

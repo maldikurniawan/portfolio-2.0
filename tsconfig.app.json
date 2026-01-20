@@ -28,7 +28,7 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
     // Route
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
