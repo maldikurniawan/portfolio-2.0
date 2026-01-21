@@ -4,7 +4,7 @@ import {
     TooltipContent,
     TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Home } from "lucide-react";
+import { ArrowUp, Home } from "lucide-react";
 import { FaGithub, FaGitlab, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { ModeToggle } from "../ui/mode-toggle";
@@ -17,25 +17,25 @@ export default function Navbar() {
         social: {
             GitHub: {
                 name: "GitHub",
-                url: "https://github.com",
+                url: "https://github.com/maldikurniawan",
                 icon: FaGithub,
                 navbar: true,
             },
             LinkedIn: {
                 name: "LinkedIn",
-                url: "https://linkedin.com",
+                url: "https://www.linkedin.com/in/aldiknn/",
                 icon: FaLinkedin,
                 navbar: true,
             },
             Instagram: {
                 name: "Instagram",
-                url: "https://www.instagram.com/",
+                url: "https://www.instagram.com/aldiknn_",
                 icon: FaInstagram,
                 navbar: true,
             },
             GitLab: {
                 name: "GitLab",
-                url: "https://gitlab.com",
+                url: "https://gitlab.com/maldikurniawan",
                 icon: FaGitlab,
                 navbar: true,
             },
@@ -46,16 +46,15 @@ export default function Navbar() {
         <div className="fixed inset-x-0 bottom-4 z-30 flex justify-center">
             <div className="flex items-center gap-2 rounded-2xl border bg-card/90 backdrop-blur px-3 py-2 shadow">
                 {DATA.navbar.map((item) => {
-                    const Icon = item.icon;
                     return (
                         <Tooltip key={item.href}>
                             <TooltipTrigger asChild>
-                                <Link
-                                    to={item.href}
-                                    className="flex h-10 w-10 items-center justify-center rounded-xl border text-muted-foreground hover:bg-muted hover:text-foreground"
+                                <button
+                                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                                    className="flex h-10 w-10 items-center justify-center rounded-xl border text-muted-foreground hover:bg-muted hover:text-foreground cursor-pointer"
                                 >
-                                    <Icon className="h-5 w-5" />
-                                </Link>
+                                    <ArrowUp className="h-5 w-5" />
+                                </button>
                             </TooltipTrigger>
                             <TooltipContent side="top">{item.label}</TooltipContent>
                         </Tooltip>
